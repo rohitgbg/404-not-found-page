@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600&family=Montserrat:wght@100;300;400;500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  /* 1rem = 10px */
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-spacemono: 'Space Mono', sans-serif;
+  --font-inconsolata: 'Inconsolata', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+
+  --color-gray-1: #333333;
+  --color-gray-2: rgb(79, 79, 79, 0.7);
+  --color-white: #ffffff;
+
+  --text-xs: 1rem;
+  --text-sm: 1.4rem;
+  --text-md: 2rem;
+  --text-lg: 4rem;
+
+  --space-sm: 0.5rem;
+  --space-md: 1.5rem;
+  --space-lg: 3rem;
+
+  --shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+body {
+  font-family: var(--font-spacemono);
+  background-color: var(--color-white);
+  color: var(--color-gray-1);
+  font-weight: 400;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1080px;
+  margin: auto;
+  display: grid;
+  grid-template-rows: 5vh 10vh 70vh 10vh 5vh;
+  grid-template-columns: 5vw repeat(8, minmax(min-content, 14rem)) 5vw;
+  align-items: center;
+}
+
+.header {
+  grid-row: 2 / 3;
+  grid-column: 2 / -1;
+}
+
+.heading--3 {
+  font-family: var(--font-inconsolata);
+  font-weight: bold;
+  font-size: var(--text-md);
+  text-transform: uppercase;
+}
+
+.scare-crow {
+  width: 110%;
+
+  grid-row: 2 / 4;
+  grid-column: 2 / 6;
+  margin-right: 5rem;
+}
+.scare-crow img {
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  grid-row: 2 / 4;
+  grid-column: 7 / 10;
+
+  display: grid;
+  align-content: center;
+  justify-items: start;
+
+  margin-left: 4rem;
+}
+
+.heading--1 {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.content__text {
+  margin-bottom: var(--space-lg);
+  font-size: var(--text-md);
+  color: var(--color-gray-2);
+}
+
+.btn {
+  background: var(--color-gray-1);
+  padding: 2rem 4rem;
+  color: var(--color-white);
+  font-family: var(--font-spacemono);
+  text-transform: uppercase;
+  font-size: var(--text-xs);
+  letter-spacing: 1px;
+}
+
+.copyright {
+  grid-row: 4 / 5;
+  grid-column: 3 / 9;
+  justify-self: center;
+  font-size: var(--text-sm);
+  font-family: var(--font-montserrat);
+  font-weight: 500;
+}
+
+/* 650px or less */
+@media screen and (max-width: 650px) {
+  .container {
+    grid-template-rows: 10vh min-content min-content 10vh;
+    grid-row-gap: 3rem;
+  }
+
+  .header {
+    grid-row: 1 / 2;
+    grid-column: 2 / -1;
+  }
+
+  .scare-crow {
+    grid-row: 2 / 3;
+    grid-column: 2 / 9;
+  }
+
+  .content {
+    grid-row: 3 / 4;
+    grid-column: 2 / 9;
+    margin-left: 2rem;
+  }
+}
