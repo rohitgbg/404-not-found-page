@@ -141,6 +141,6 @@ body {
   .content {
     grid-row: 3 / 4;
     grid-column: 2 / 9;
-    margin-left: 2rem;
+    margin-left: 0rem;
   }
 }
