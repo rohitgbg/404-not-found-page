@@ -49,7 +49,7 @@ body {
   max-width: 1080px;
   margin: auto;
   display: grid;
-  grid-template-rows: 5vh 10vh 70vh 10vh 5vh;
+  grid-template-rows: 5vh 15vh 65vh 10vh 5vh;
   grid-template-columns: 5vw repeat(8, minmax(min-content, 14rem)) 5vw;
   align-items: center;
 }
@@ -57,6 +57,7 @@ body {
 .header {
   grid-row: 2 / 3;
   grid-column: 2 / -1;
+  align-self: start;
 }
 
 .heading--3 {
@@ -122,6 +123,7 @@ body {
 /* 650px or less */
 @media screen and (max-width: 650px) {
   .container {
+    margin-top: 2rem;
     grid-template-rows: 10vh min-content min-content 10vh;
     grid-row-gap: 3rem;
   }
