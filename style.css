@@ -118,6 +118,8 @@ body {
   font-size: var(--text-sm);
   font-family: var(--font-montserrat);
   font-weight: 500;
+  align-self: end;
+  margin-bottom: 1rem;
 }
 
 /* 650px or less */
